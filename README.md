@@ -1,1 +1,2 @@
+# Sistema Api 
 Desenvolvi uma aplicação servidora que permite ao proprietário (CPF, nome e telefone) gerenciar um ou mais veículos (placa, modelo e preço). A aplicação classifica os veículos em três tipos: popular (preço < R$ 45.000,00), luxo (R$ 45.000,00 <= preço < R$ 90.000,00) e super luxo (preço >= R$ 90.000,00). Utiliza ORM (Object Relational Mapping) para persistência de dados e atende requisições CRUD via API REST. Permite consultas de veículos por proprietário e tipo. Inclui autenticação JWT em um dos endpoints da API, com opção de login (usuário e senha).
