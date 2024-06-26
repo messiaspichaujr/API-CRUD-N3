@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "dotenv-safe": "^9.1.0",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.10.1",
+    "readline-sync": "^1.4.10",
+    "sequelize": "^6.37.3"
+  },
+  "name": "veiculos",
+  "version": "1.0.0",
+  "main": "config\\database.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

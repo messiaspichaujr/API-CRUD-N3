@@ -1,0 +1,93 @@
+
+# @name tokenacc
+POST http://localhost:5000/login HTTP/1.1
+Content-Type: application/json
+ 
+{
+    "user": "Messias",
+    "pwd": "123"
+}
+ 
+###
+POST http://localhost:5000/logout HTTP/1.1
+Content-Type: application/json
+ 
+###
+GET http://localhost:5000/exemplo
+x-access-token: {{tokenacc.response.body.token}}
+
+//---------------------------------------------------
+
+### Listar todos os proprietários
+GET http://localhost:5000/api/proprietarios
+Content-Type: application/json
+
+### Criar um proprietário
+POST http://localhost:5000/api/proprietarios HTTP/1.1
+Content-Type: application/json
+
+{
+    "cpf": "12751543952",
+    "nome": "anselmo",
+    "fone": "47996879248"
+}
+###
+GET http://localhost:5000/api/veiculos
+Content-Type: application/json
+
+### Criar veículo popular
+POST http://localhost:5000/api/veiculos
+Content-Type: application/json
+
+{
+    "placa_veiculo": "ARI9211",
+    "modelo_veiculo": "GOL",
+    "preco_veiculo": 30000,
+    "cpf": "",
+    "id_tipo": 1
+}
+
+### Criar veículo luxo
+POST http://localhost:5000/api/veiculos
+Content-Type: application/json
+
+{
+    "placa_veiculo": "KIL8895",
+    "modelo_veiculo": "COROLLA",
+    "preco_veiculo": 50000,
+    "cpf": "",
+    "id_tipo": 2
+}
+
+### Criar veículo super luxo
+POST http://localhost:5000/api/veiculos
+Content-Type: application/json
+
+{
+    "placa_veiculo": "AXE3D17",
+    "modelo_veiculo": "BMW",
+    "preco_veiculo": 120000,
+    "cpf": "",
+    "id_tipo": 3
+}
+
+### Obter todos os veículos
+GET http://localhost:5000/api/
+
+
+### Obter um veículo específico
+GET http://localhost:5000/api/veiculos/ARI9211
+
+
+### Atualizar um veículo
+PUT http://localhost:5000/api/veiculos/placa...
+Content-Type: application/json
+
+{
+    "modelo_veiculo": "",
+    "preco_veiculo": ,
+    "cpf": ""
+}
+
+### Deletar um veículo
+DELETE http://localhost:5000/api/veiculos/ARI9211
